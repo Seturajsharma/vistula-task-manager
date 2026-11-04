@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#f2f5f3">
+		<title>Task Manager</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css">
+		<script src="app.js" defer></script>
+	</head>
+	<body>
+		<div class="app-shell">
+			<header class="topbar">
+				<a class="brand" href="index.html" aria-label="Task Manager home">
+					<span class="brand-mark" aria-hidden="true">T</span>
+					<span>Task Manager</span>
+				</a>
+				<div class="student-badge">
+					<span class="student-label">jishnu krishna menon</span>
+					<span id="student-id">[72987]</span>
+				</div>
+			</header>
+
+			<main>
+				<section class="page-heading" aria-labelledby="page-title">
+					<div>
+						<p class="eyebrow">YOUR WORKSPACE</p>
+						<h1 id="page-title">Task Manager</h1>
+						<p class="page-intro">Keep your next steps clear and moving.</p>
+					</div>
+					<a class="contribution-link" id="contribution-link" href="contribution.html">
+						<span aria-hidden="true">↗</span> Contribution
+					</a>
+				</section>
+
+				<div class="workspace">
+					<section class="composer-panel" aria-labelledby="form-heading">
+						<div class="section-heading">
+							<span class="section-index">01</span>
+							<h2 id="form-heading">Add a task</h2>
+						</div>
+						<p class="panel-intro">Capture what needs your attention.</p>
+
+						<form id="task-form">
+							<label for="task-title">Task title <span aria-hidden="true">*</span></label>
+							<input
+								id="task-title"
+								name="title"
+								type="text"
+								placeholder="e.g. Prepare project outline"
+								maxlength="200"
+								required
+							>
+
+							<label for="task-description">Description <span class="optional">Optional</span></label>
+							<textarea
+								id="task-description"
+								name="description"
+								rows="5"
+								placeholder="Add a few helpful details..."
+								maxlength="2000"
+							></textarea>
+
+							<div class="form-actions">
+								<button class="primary-button" id="task-submit" type="submit">
+									<span class="button-icon" aria-hidden="true">+</span>
+									<span>Add task</span>
+								</button>
+								<button class="text-button" id="task-cancel-edit" type="button" hidden>Cancel edit</button>
+							</div>
+						</form>
+						<p class="form-note"><span aria-hidden="true">*</span> Required field</p>
+					</section>
+
+					<section class="tasks-panel" aria-labelledby="tasks-heading">
+						<div class="tasks-heading-row">
+							<div class="section-heading">
+								<span class="section-index">02</span>
+								<h2 id="tasks-heading">Your tasks</h2>
+							</div>
+							<span class="tasks-label">ALL TASKS</span>
+						</div>
+						<p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+						<div id="task-list" class="task-list" aria-live="polite">
+							<p class="empty-state">Loading your tasks<span class="loading-dots" aria-hidden="true">...</span></p>
+						</div>
+					</section>
+				</div>
+			</main>
+
+			<footer class="page-footer">
+				<span>Vistula University · Individual Application</span>
+				<span>Plan thoughtfully. Do the work.</span>
+			</footer>
+		</div>
+	</body>
+</html>
