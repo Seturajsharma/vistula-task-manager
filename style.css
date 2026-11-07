@@ -501,6 +501,77 @@ h2 {
 	font-size: 11px;
 }
 
+.contribution-page {
+	padding: 42px 0 28px;
+}
+
+.contribution-card {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 32px 28px;
+	border: 1px solid rgba(28, 41, 37, 0.08);
+	border-radius: 12px;
+	background: rgba(255, 255, 255, 0.82);
+	box-shadow: var(--shadow);
+}
+
+.contribution-card .eyebrow {
+	margin-bottom: 10px;
+}
+
+.contribution-card h1 {
+	margin-bottom: 10px;
+}
+
+.contribution-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 12px;
+	margin-top: 20px;
+}
+
+.student-id-card {
+	margin-top: 24px;
+	padding-top: 18px;
+	border-top: 1px solid rgba(28, 41, 37, 0.08);
+}
+
+.student-id-label {
+	display: block;
+	margin-bottom: 8px;
+	color: var(--muted);
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.student-id-display {
+	display: block;
+	color: var(--green-dark);
+	font-family: "Space Grotesk", sans-serif;
+	font-size: clamp(2rem, 2.6vw, 3rem);
+	font-weight: 700;
+	letter-spacing: 0.02em;
+	word-break: break-word;
+}
+
+.contribution-status {
+	min-height: 24px;
+	margin: 16px 0 0;
+	color: var(--muted);
+	font-size: 13px;
+}
+
+.contribution-status[data-type="success"] {
+	color: var(--green-dark);
+}
+
+.contribution-status[data-type="error"] {
+	color: #ad4034;
+}
+
 @keyframes task-enter {
 	from { opacity: 0; transform: translateY(5px); }
 	to { opacity: 1; transform: translateY(0); }
@@ -576,6 +647,10 @@ h2 {
 	.page-footer {
 		flex-direction: column;
 		gap: 6px;
+	}
+
+	.contribution-card {
+		padding: 24px 18px;
 	}
 }
 
